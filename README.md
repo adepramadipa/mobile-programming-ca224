@@ -1,6 +1,6 @@
-# myapp
+# I Gusti Made Pramadipa(220040015)
 
-A new Flutter project.
+! [alt text](https://github.com/adepramadipa/mobile-programming-ca224/blob/tugas_pertemuan03/assets/images/projek%20idx.png?raw=true)
 
 ## Getting Started
 
