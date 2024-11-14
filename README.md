@@ -1,6 +1,7 @@
 I Gusti Made Pramadipa (220040015)
 
-A new Flutter project.
+<img width="166" alt="03 tugas" src="https://github.com/user-attachments/assets/416504e5-dc21-43ab-a663-64cae948849e">
+
 
 ## Getting Started
 
