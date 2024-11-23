@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'add_animal_screen.dart'; // Mengimpor AddAnimalScreen
+import 'add_animal_screen.dart'; // Importing AddAnimalScreen
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            // Menavigasi ke AddAnimalScreen
+            // Navigate to AddAnimalScreen
             Navigator.push(
               context,
               MaterialPageRoute(

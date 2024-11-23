@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart'; // Mengimpor HomeScreen
+import 'screens/home_screen.dart'; // Importing HomeScreen
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Pengelolaan Data Hewan',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const HomeScreen(),  // Memulai aplikasi dengan HomeScreen
+      home: const HomeScreen(),  // Starting with HomeScreen
     );
   }
 }
