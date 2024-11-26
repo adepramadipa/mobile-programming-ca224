@@ -1,8 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/pages/create_comment.dart';
+import 'create_comment.dart';
 
-class ListCommentsPage extends StatelessWidget {
-  const ListCommentsPage({super.key});
+class ListCommentsPage extends StatefulWidget {
+  const ListCommentsPage({Key? key}) : super(key: key);
+
+  @override
+  State<ListCommentsPage> createState() => _ListCommentsPageState();
+}
+
+class _ListCommentsPageState extends State<ListCommentsPage> {
+  // List untuk menyimpan komentar
+  final List<Map<String, String>> _comments = [
+    {"name": "Andi", "comment": "Mantap sekali!"},
+    {"name": "Budi", "comment": "Keren banget."},
+  ];
+
+  // Fungsi untuk menambah komentar baru
+  void _addComment(String name, String comment) {
+    setState(() {
+      _comments.add({"name": name, "comment": comment});
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -12,15 +30,29 @@ class ListCommentsPage extends StatelessWidget {
         centerTitle: true,
       ),
       body: ListView.builder(
-        itemCount: 10, // Jumlah komentar (contoh statis)
+        itemCount: _comments.length,
         itemBuilder: (context, index) {
-          return ListTile(
-            leading: CircleAvatar(
-              backgroundColor: Colors.grey.shade300,
-              child: Text("U$index"), // Placeholder user avatar
-            ),
-            title: Text("User $index"),
-            subtitle: Text("This is comment $index."),
+          return Column(
+            children: [
+              ListTile(
+                leading: CircleAvatar(
+                  backgroundColor: Colors.primaries[index % Colors.primaries.length],
+                  child: Text(
+                    _comments[index]["name"]![0].toUpperCase(), // Inisial nama
+                    style: const TextStyle(color: Colors.white),
+                  ),
+                ),
+                title: Text(_comments[index]["name"]!),
+                subtitle: Text(_comments[index]["comment"]!),
+              ),
+              // Garis pemisah
+              const Divider(
+                color: Colors.grey, // Warna garis pemisah
+                thickness: 1, // Ketebalan garis
+                indent: 72, // Jarak garis dari sisi kiri
+                endIndent: 16, // Jarak garis dari sisi kanan
+              ),
+            ],
           );
         },
       ),
@@ -29,7 +61,9 @@ class ListCommentsPage extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => CreateCommentPage(),
+              builder: (context) => CreateCommentPage(
+                onSubmit: _addComment,
+              ),
             ),
           );
         },
