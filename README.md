@@ -1,6 +1,8 @@
-# myapp
+# I Gusti Made Pramadipa (220040015)
 
-A new Flutter project.
+
+![1122334455](https://github.com/user-attachments/assets/4332a083-7e9e-49ee-b2d1-25835ecab9b0)
+
 
 ## Getting Started
 
